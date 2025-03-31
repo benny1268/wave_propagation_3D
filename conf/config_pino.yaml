@@ -1,0 +1,23 @@
+hydra:
+  job:
+    chdir: True
+  run:
+    dir: ./outputs
+
+start_lr: 0.001
+gamma: 0.99
+max_epochs: 400
+
+physics_weight: 0.1
+
+model:
+  fno:
+    in_channels: 3
+    out_channels: 1
+    decoder_layers: 1
+    decoder_layer_size: 32
+    dimension: 3
+    latent_channels: 16
+    num_fno_layers: 4
+    num_fno_modes: 32
+    padding: 8
